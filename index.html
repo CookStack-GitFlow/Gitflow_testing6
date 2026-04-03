@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A premium, modern calculator with glassmorphism design and smooth animations.">
+    <title>Premium Calculator | Modern UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="calculator-container">
+        <header>
+            <h1>Quantum Calc</h1>
+        </header>
+
+        <section class="calculator-glass">
+            <div class="display">
+                <div class="previous-operand" id="previous-operand"></div>
+                <div class="current-operand" id="current-operand">0</div>
+            </div>
+            
+            <div class="buttons-grid">
+                <button class="btn btn-action" onclick="clearDisplay()">AC</button>
+                <button class="btn btn-action" onclick="deleteLast()">DEL</button>
+                <button class="btn btn-operator" onclick="chooseOperator('/')">÷</button>
+                <button class="btn btn-operator" onclick="chooseOperator('*')">×</button>
+
+                <button class="btn" onclick="appendNumber('7')">7</button>
+                <button class="btn" onclick="appendNumber('8')">8</button>
+                <button class="btn" onclick="appendNumber('9')">9</button>
+                <button class="btn btn-operator" onclick="chooseOperator('-')">−</button>
+
+                <button class="btn" onclick="appendNumber('4')">4</button>
+                <button class="btn" onclick="appendNumber('5')">5</button>
+                <button class="btn" onclick="appendNumber('6')">6</button>
+                <button class="btn btn-operator" onclick="chooseOperator('+')">+</button>
+
+                <button class="btn" onclick="appendNumber('1')">1</button>
+                <button class="btn" onclick="appendNumber('2')">2</button>
+                <button class="btn" onclick="appendNumber('3')">3</button>
+                <button class="btn btn-equals" onclick="compute()">=</button>
+
+                <button class="btn btn-zero" onclick="appendNumber('0')">0</button>
+                <button class="btn" onclick="appendNumber('.')">.</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
